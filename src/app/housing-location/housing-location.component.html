@@ -5,6 +5,10 @@
         alt="Photo de l'exterieur {{ housingLocation.name }}"
         crossorigin
     />
-    <h2 class="listing-heading"> {{ housingLocation.name }} </h2>
+    <h2 class="listing-heading"> 
+        <a [routerLink]="['/details', housingLocation.id]">
+            {{ housingLocation.name }} 
+        </a>
+    </h2>
     <p class="listing-location"> {{ housingLocation.city }}, {{ housingLocation.state }} </p>
 </section>
